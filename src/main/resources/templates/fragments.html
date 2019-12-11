@@ -17,6 +17,15 @@
     </ul>
 </nav>
 
+<nav th:fragment="table">
+    <table th:block th:each="event : ${events}">
+        <tr>
+            <td th:text="${event.getKey()}"></td>
+            <td th:text="${event.getValue()}"></td>
+            </th:block>
+        </tr>
+    </table>
+</nav>
 
 </body>
 </html>

@@ -10,13 +10,7 @@
 
 <p th:unless="${events} and ${events.size()}">No Events!</p>
 
-<nav>
-    <ul>
-        <th:block th:each="event : ${events}">
-        <li th:text="${event}"></li>
-        </th:block>
-    </ul>
-</nav>
+<nav th:replace="fragments :: table"></nav>
 
 </body>
 </html>
